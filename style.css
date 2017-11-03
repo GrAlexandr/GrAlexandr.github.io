@@ -158,18 +158,28 @@ a {
 	flex-flow: row wrap;
 	
 }
-.photo {
+.photo,
+.text-left,
+.form-left,
+.footer-top-left {
 	width: 47.8%;
+}
+.photo {
 	height: auto;
 	background: #d6d7d9;
 	display: flex;
+}
+.info,
+.text-right,
+.form-right,
+.footer-top-right {
+	width: 52.2%;
 }
 .photo img {
 	width: 100%;
 	align-self: center;
 }
 .info {
-	width: 52.2%;
 	height: 616px;
 	background-color: #0e4675;
 	font-family: Geneva, Arial, Helvetica, sans-serif;
@@ -200,7 +210,6 @@ a {
 	color: #fff;
 }
 .text-left {
-	width: 47.8%;
 	height: 503px;
 	background-color: #fff;
 	display: flex;
@@ -237,7 +246,6 @@ a {
 	color: #909092;
 }
 .text-right {
-	width: 52.2%;
 	height: 503px;
 	background-color: #fff;
 }
@@ -249,12 +257,10 @@ a {
 	list-style: disc;
 }
 .form-left {
-	width: 47.8%;
 	height: 745px;
 	background-image: url(img/form/doctor.png);
 }
 .form-right {
-	width: 52.2%;
 	height: 745px;
 	background-color: #f0f3f5;
 	display: flex;
@@ -314,14 +320,12 @@ a {
 	align-content: center;
 }
 .footer-top-left {
-	width: 47.8%;
-	height: 100%;
+	height: auto;
 	background-color: #58585a;
 
 }
 .footer-top-right {
-	width: 52.2%;
-	height: 100%;
+	height: auto;
 	background-color: #58585a;
 }
 .footer-top-nav {
@@ -400,9 +404,8 @@ a {
 	.footer-top .footer-top-right {
 		display: none;
 	}
-
-	.header-left,
-	.header-right,
+	.header,
+	.nav,
 	.main .photo,
 	.main .info,
 	.text-left,
@@ -410,7 +413,7 @@ a {
 	.form-right,
 	.footer-top .footer-top-left {
 		width: 100%;
-
+		height: auto;
 	}
 	.text-left,
 	.form-right {
@@ -419,11 +422,5 @@ a {
 	.text-left {
 		flex-flow: row wrap;
 		padding-left: 15px;
-	}
-}
-@media screen and (max-width: 570px) {
-	.nav,
-	.footer-top {
-		height: auto;
 	}
 }
