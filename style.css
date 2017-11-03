@@ -9,7 +9,6 @@ body {
 	flex-flow: row wrap;
 }
 .header {
-	max-width: 100%;
 	height: 139px;
 	border-top: 7px solid #58585a;
 	border-bottom: 1px solid #f0f0f0;
@@ -102,6 +101,19 @@ a {
 	display: flex;
 	flex-flow: row wrap;
 }
+.b1 {
+	background-color: #fafafa;
+	border: none;
+}
+.russia {
+	color: red;
+	background-color: #f3f3f3;
+}
+.fa-pencil-square-o,
+.fa-phone,
+.fa-paper-plane {
+	margin-right: 5px;
+}
 .nav-header-bottom {
 	display: flex;
 	flex-flow: row wrap;
@@ -116,7 +128,7 @@ a {
 }
 .nav {
 	width: 4.2%;
-	height: 2450px;
+	max-height: 2450px;
 	background: linear-gradient(to top, #104674, #d7262e);
 	display: flex;
 	flex-flow: column nowrap;
@@ -142,14 +154,13 @@ a {
 .main {
 	width: 95.8%;
 	height: auto;
-	background: grey;
 	display: flex;
 	flex-flow: row wrap;
 	
 }
 .photo {
 	width: 47.8%;
-	height: 616px;
+	height: auto;
 	background: #d6d7d9;
 	display: flex;
 }
@@ -278,7 +289,7 @@ a {
 }
 .map {
 	width: 100%;
-	height: 400px;
+	height: auto;
 }
 .map img {
 	width: 100%;
@@ -386,27 +397,33 @@ a {
 @media screen and (max-width: 1096px) {
 	.header-left,
 	.form-left,
-	.map,
 	.footer-top .footer-top-right {
 		display: none;
 	}
-	.main .photo {
-		display: none;
-	}
+
 	.header-left,
 	.header-right,
+	.main .photo,
 	.main .info,
 	.text-left,
 	.text-right,
 	.form-right,
 	.footer-top .footer-top-left {
 		width: 100%;
+
 	}
+	.text-left,
 	.form-right {
 		justify-content: center;
 	}
 	.text-left {
 		flex-flow: row wrap;
 		padding-left: 15px;
+	}
+}
+@media screen and (max-width: 570px) {
+	.nav,
+	.footer-top {
+		height: auto;
 	}
 }
