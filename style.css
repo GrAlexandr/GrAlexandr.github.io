@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	font-family: Arial, Tahoma, "Trebuchet MS", sans-serif;
 }
 .wrapper {
 	max-width: 1903px;
@@ -216,7 +217,6 @@ a {
 	flex-flow: column wrap;
 	justify-content: flex-start;
 	align-items: flex-end;
-
 }
 .text-left h2 {
 	background: linear-gradient(to right, #d7262e, #104674);
@@ -291,11 +291,11 @@ a {
 }
 #appointment {
 	width: 50%;
-	margin-left: 72px;
+	margin-left: 48px;
 }
 .map {
 	width: 100%;
-	height: auto;
+	height: 400px;
 }
 .map img {
 	width: 100%;
@@ -399,7 +399,10 @@ a {
 	}
 }
 @media screen and (max-width: 1096px) {
-	.header-left,
+	.header {
+		display: block;
+	}
+
 	.form-left,
 	.footer-top .footer-top-right {
 		display: none;
@@ -411,16 +414,51 @@ a {
 	.text-left,
 	.text-right,
 	.form-right,
-	.footer-top .footer-top-left {
+	.footer-top .footer-top-left,
+	.footer-top .footer-top-right {
 		width: 100%;
 		height: auto;
 	}
 	.text-left,
-	.form-right {
-		justify-content: center;
+	.form-right-wrap {
+		display: block;
+		margin-left: 15px;
+	}
+	.text-left h2 {
+		margin: 5px 0 0 15px;
+	}
+}
+@media screen and (max-width: 570px) {
+	.header-left .logo img {
+		width: 150px;
+	}
+	.header-left .logo p {
+		font-size: 10px;
+		left: 65px;
+	}
+	.nav .sprite img {
+		width: 25px;
+		height: 25px;
+		/*margin-bottom: 10px;*/
+		margin: 5px;
+	}
+	.nav .social {
+		margin-top: 0;
+	}
+	.nav .title span {
+		font-size: 16px;
 	}
 	.text-left {
-		flex-flow: row wrap;
-		padding-left: 15px;
+		display: block;
+	}
+	.phone,
+	.footer-logo {
+		display: none;
+	}
+	.footer-phone {
+		margin: 0 auto;
+	}
+	.footer-bottom p {
+		font-size: 12px;
 	}
 }
