@@ -291,7 +291,7 @@ a {
 }
 #appointment {
 	width: 50%;
-	margin-left: 48px;
+	margin-left: 45px;
 }
 .map {
 	width: 100%;
@@ -437,16 +437,20 @@ a {
 		left: 65px;
 	}
 	.nav .sprite img {
-		width: 25px;
-		height: 25px;
+		width: 22px;
+		height: 22px;
 		/*margin-bottom: 10px;*/
-		margin: 5px;
+		margin: 10px 5px;
 	}
 	.nav .social {
 		margin-top: 0;
 	}
+	.nav .title {
+		margin: 10px 5px;
+	}
 	.nav .title span {
-		font-size: 16px;
+		font-size: 14px;
+		margin: 10px 5px;
 	}
 	.text-left {
 		display: block;
