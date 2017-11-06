@@ -274,7 +274,7 @@ a {
 }
 .form-right-wrap input,
 .form-right-wrap select {
-	width: 100%;
+	width: 99%;
 	height: 48px;
 	margin-bottom: 20px;
 }
@@ -414,6 +414,7 @@ a {
 	.text-left,
 	.text-right,
 	.form-right,
+	.map,
 	.footer-top .footer-top-left,
 	.footer-top .footer-top-right {
 		width: 100%;
