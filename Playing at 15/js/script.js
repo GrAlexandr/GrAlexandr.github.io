@@ -65,6 +65,7 @@ btnNewGame.on('click', newGame);
 btnGameOver.on('click', gameOver);
 
 ul.onclick = function (e) {
+	event.preventDefault();
 	var inter = e.target.textContent;
 	for (var i = 0; i < li.length; i++) {
 		if (li[i].textContent === '16' && e.target === li[i - 1] || e.target === li[i + 1] || e.target === li[i + 4] || e.target === li[i - 4]) {
