@@ -1,7 +1,6 @@
 'use strict';
 
 var arr = JSON.parse(localStorage.getItem('game')) || [],
-	//ul = $('.play'),
 	ul = document.querySelector('.play'),
 	li = $('li'),
 	sort = $(".sortable"),
@@ -57,10 +56,10 @@ function gameOver() {
 	localStorage.setItem('game', JSON.stringify(arr));
 }
 
-$(function () {
-	sort.sortable();
-	sort.disableSelection();
-});
+// $(function () {
+// 	sort.sortable();
+// 	sort.disableSelection();
+// });
 
 btnNewGame.on('click', newGame);
 btnGameOver.on('click', gameOver);
