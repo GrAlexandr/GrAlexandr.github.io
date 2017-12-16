@@ -1,11 +1,16 @@
 'use strict';
 
 var arr = JSON.parse(localStorage.getItem('game')) || [],
+	wrap = document.querySelector('.wrapper'),
 	ul = document.querySelector('.play'),
 	li = $('li'),
 	sort = $(".sortable"),
 	btnNewGame = $('#btnNewGame'),
 	btnGameOver = $('#btnGameOver');
+
+wrap.onmousedown = wrap.onselectstart = function() {
+	return false;
+};
 
 function addLocStor() {
 	if (arr.length === 0) {
@@ -65,7 +70,6 @@ btnNewGame.on('click', newGame);
 btnGameOver.on('click', gameOver);
 
 ul.onclick = function (e) {
-	event.preventDefault();
 	var inter = e.target.textContent;
 	for (var i = 0; i < li.length; i++) {
 		if (li[i].textContent === '16' && e.target === li[i - 1] || e.target === li[i + 1] || e.target === li[i + 4] || e.target === li[i - 4]) {
