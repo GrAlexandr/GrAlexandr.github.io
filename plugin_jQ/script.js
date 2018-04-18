@@ -1,8 +1,8 @@
 jQuery.fn.extend({
 
 	slider: function() {
-		var btnPrev = this.find('.buttons .prev');
-		var btnNext = this.find('.buttons .next');
+		var btnPrev = this.find('.prev');
+		var btnNext = this.find('.next');
 		var images = this.find('.photos img');
 		var i = 0;
 
@@ -14,6 +14,7 @@ jQuery.fn.extend({
 			}
 			$(images[i]).addClass('showed');
 		});
+
 		btnNext.on('click', function () {
 			images[i].className = '';
 			i++;
@@ -22,9 +23,10 @@ jQuery.fn.extend({
 			}
 			$(images[i]).addClass('showed');
 		});
+
 		return this;
 	}
 
 });
 
-$('.gallery').slider().css('border', '2px solid red');
+$('.gallery').slider().css('border', '1px solid red');
