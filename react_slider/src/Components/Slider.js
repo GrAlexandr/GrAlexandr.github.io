@@ -5,8 +5,8 @@ class Slider extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {}
-		this.state.counter = 0
+		this.state = {};
+		this.state.counter = 0;
 		this.state.pictures = [
 			{
 				num: 'first',
@@ -67,26 +67,27 @@ class Slider extends Component {
 	render() {
 		return (
 			<div className='slider'>
-				<div className='slider-left'>
-					<input type="button" onClick={this.pictureLeft} value="&#x00AB;" />
-				</div>
-				<div className='slider-right'>
-					<input type="button" onClick={this.pictureRight} value="&#x00BB;" />
-				</div>
-
-				{this.state.pictures.map( (elem, i) => {
-					if(i === this.state.counter) {
-						return (
-							<Picture
-							url={elem.url}
-							num={elem.num}
-							/>
-						)
-					}
-				})
-				}
+			<div className='slider-left'>
+			<input type="button" onClick={this.pictureLeft} value="&#x00AB;" />
 			</div>
-		);
+			<div className='slider-right'>
+			<input type="button" onClick={this.pictureRight} value="&#x00BB;" />
+			</div>
+
+			{this.state.pictures.map( (elem, i) => {
+				if(i === this.state.counter) {
+					return (
+						<Picture
+					url={elem.url}
+					num={elem.num}
+					key={i}
+						/>
+				)
+				}
+			})
+	}
+	</div>
+	);
 	}
 }
 
