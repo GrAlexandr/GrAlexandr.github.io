@@ -16,13 +16,23 @@ jQuery.fn.extend({
 		});
 
 		btnNext.on('click', function () {
+			next();
+		});
+
+		function next() {
 			images[i].className = '';
 			i++;
-			if (i >= images.length) {
+
+			if(i >= images.length) {
 				i = 0;
 			}
-			$(images[i]).addClass('showed');
-		});
+
+			images[i].className = 'showed';
+		}
+
+		setInterval(function () {
+			next();
+		}, 2500);
 
 		return this;
 	}
